@@ -1,0 +1,29 @@
+public class Customer {
+    private String name;
+    private int customerNumber;
+    private int pin;
+    private double balance;
+
+    public Customer(String name, int customerNumber, int pin, double balance) {
+        this.name = name;
+        this.customerNumber = customerNumber;
+        this.pin = pin;
+        this.balance = balance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCustomerNumber() {
+        return customerNumber;
+    }
+
+    public int getPin() {
+        return pin;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
