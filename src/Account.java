@@ -1,38 +1,32 @@
 import java.util.Scanner;
 
 public class Account {
-    double balance = 0.0;
-    String customerName;
-    String customerID;
 
+        double balance;
 
-    // constructor
-    Account(String customerName, String customerID) {
-        this.customerName = customerName;
-        this.customerID = customerID;
+    public Account(double balance) {
+        this.balance = balance;
     }
 
     // einzahlung geld
-    void deposit (double amount) {
+    void deposit(double amount) {
         if (amount != 0) {
             balance = balance + amount;
 
         }
     }
+
     // Auszahlung geld
     void withdraw (double amount) {
         if (amount != 0) {
             balance = balance - amount;
         }
     }
-
-
-    // Benutzer Oberfläche
     void showMenu() {
         char option = '\0';
         Scanner scanner = new Scanner (System.in);
         System.out.println("B A N K O M A T EOS-Bank Standort: Hamburg");
-        System.out.println("Willkommen, " + customerName + "!");
+        System.out.println("Willkommen!");
         System.out.println();
         System.out.println("Was moechten Sie gerne tun?");
         System.out.println();
@@ -51,7 +45,7 @@ public class Account {
 
             switch (option) {
                 // erlaubt das guthaben zu zeigen
-                case 'A' -> System.out.println("Kontostand = €" + balance);
+                case 'A' -> System.out.println("Kontostand = " + balance);
 
                 // erlaubt guthaben einzuzahlen
                 case 'B' -> {
@@ -82,5 +76,6 @@ public class Account {
         } while (option != 'D');
         System.out.println("Danke fuer das benutzen der EOS-Bank Hamburg!");
     }
+
 
 }
